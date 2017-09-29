@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "required": [
+    "graph"
+  ],
+  "id": "http://example.com/example.json",
+  "properties": {
+    "filters": {
+      "id": "/properties/filters",
+      "properties": {
+        "and": {
+          "id": "/properties/filters/properties/and",
+          "items": {
+            "id": "/properties/filters/properties/and/items",
+            "properties": {
+              "business_hours": {
+                "id": "/properties/filters/properties/and/items/properties/business_hours",
+                "properties": {
+                  "timezone": {
+                    "id": "/properties/filters/properties/and/items/properties/business_hours/properties/timezone",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "or": {
+          "id": "/properties/filters/properties/or",
+          "items": {
+            "id": "/properties/filters/properties/or/items",
+            "properties": {
+              "specific_day": {
+                "id": "/properties/filters/properties/or/items/properties/specific_day",
+                "properties": {
+                  "day": {
+                    "id": "/properties/filters/properties/or/items/properties/specific_day/properties/day",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "future": {
+      "id": "/properties/future",
+      "type": "string"
+    },
+    "graph": {
+      "id": "/properties/graph",
+      "type": "string"
+    },
+    "length": {
+      "id": "/properties/length",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar</title>
+
+    {% load static %}
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
+    <script type="text/javascript" src="{% static 'widget/js/calendar.js' %}"></script>
+    <script>
+        $(function(){
+            var config_data = {};
+            config_data.app = "{{ app_name }}";
+            config_data.email = "{{ user.dummy_email }}";
+            config_data.apiToken = "{{ user.token }}";
+            config_data.calendarId = "{{ calendar.calendar_id }}";
+            config_data.bookingGraph = "{{ availability_filter.graph }}";
+            config_data.filters = {{filters|safe}};
+            config_data.future = "{{ availability_filter.future }}";
+            config_data.length = "{{ availability_filter.length }}";
+            config_data.customer_params = {{customer_parameter|safe}};
+            calendar.initWidget(config_data);
+        });
+    </script>
+</head>
+<body>
+    <div id="bookingjs"></div>
+</body>
+</html>

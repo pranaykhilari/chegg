@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "required": [
+    "first_name",
+    "dummy_email",
+    "timezone",
+    "name",
+    "description"
+  ],
+  "id": "http://example.com/example.json",
+  "properties": {
+    "background_color": {
+      "id": "/properties/background_color",
+      "type": "string"
+    },
+    "description": {
+      "id": "/properties/description",
+      "type": "string"
+    },
+    "dummy_email": {
+      "id": "/properties/dummy_email",
+      "type": "string"
+    },
+    "first_name": {
+      "id": "/properties/first_name",
+      "type": "string"
+    },
+    "foreground_color": {
+      "id": "/properties/foreground_color",
+      "type": "string"
+    },
+    "name": {
+      "id": "/properties/name",
+      "type": "string"
+    },
+    "timezone": {
+      "id": "/properties/timezone",
+      "type": "string"
+    }
+  },
+  "type": "object"
+}
